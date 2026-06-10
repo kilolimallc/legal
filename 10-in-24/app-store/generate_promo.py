@@ -161,8 +161,8 @@ def make_monthly():
     d = ImageDraw.Draw(img, "RGBA")
 
     # eyebrow wordmark
-    text_center(d, cx, int(112 * S), "10 IN 24", font(F_BOLD, 30),
-                (255, 255, 255, 235), tracking=int(10 * S))
+    text_center(d, cx, int(112 * S), "10 IN 24", font(F_BOLD, 52),
+                (255, 255, 255, 240), tracking=int(14 * S))
 
     # hero plane (aviation cue absent from the icon)
     plane_glyph(d, cx, int(W * 0.305), int(W * 0.092), (255, 255, 255, 255))
@@ -228,8 +228,8 @@ def make_annual():
     d = ImageDraw.Draw(img, "RGBA")
 
     # eyebrow wordmark
-    text_center(d, cx, int(108 * S), "10 IN 24", font(F_BOLD, 30),
-                (255, 255, 255, 235), tracking=int(10 * S))
+    text_center(d, cx, int(108 * S), "10 IN 24", font(F_BOLD, 52),
+                (255, 255, 255, 240), tracking=int(14 * S))
 
     # BEST VALUE pill
     pill(d, cx, int(196 * S), "BEST VALUE", font(F_BOLD, 27),
