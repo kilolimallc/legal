@@ -1,6 +1,6 @@
 {
-  "body" : "Settings in the app are defaults — confirm they match your operator's current procedures before relying on the results.",
-  "id" : "2026-06-check-your-settings",
-  "severity" : "warning",
-  "title" : "Check Your Settings"
+  "body" : "We've shipped improvements in the latest version. Tap Learn More for the details.",
+  "id" : "2026-06-info-what-s-new",
+  "severity" : "info",
+  "title" : "What's New"
 }
