@@ -1,7 +1,1 @@
-{
-  "blockBelowVersion" : "2.6",
-  "body" : "This is a forced-update test. On a real build this would mean a newer version is required to continue.",
-  "id" : "2026-06-force-test",
-  "severity" : "critical",
-  "title" : "Update Required"
-}
+{}
