@@ -1,6 +1,6 @@
 {
   "body" : "This is a critical message. It appears even when In-App Messages are turned off.",
-  "id" : "2026-06-test-3-critical",
+  "id" : "2026-06-test-4-critical",
   "minVersion" : "2.5",
   "severity" : "critical",
   "title" : "Critical Notice"
