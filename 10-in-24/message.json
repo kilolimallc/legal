@@ -1,7 +1,7 @@
 {
-  "body" : "If you can read this, the launch-message system works. This is a test notice — dismiss it and it won't return.",
-  "id" : "2026-06-test-2",
+  "body" : "This is a normal info message. With In-App Messages turned off, you should NOT see this.",
+  "id" : "2026-06-test-3-info",
   "minVersion" : "2.5",
   "severity" : "info",
-  "title" : "In-App Messages Are Live"
+  "title" : "Routine Notice"
 }
