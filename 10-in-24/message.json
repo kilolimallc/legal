@@ -1,7 +1,7 @@
 {
-  "body" : "This is a normal info message. With In-App Messages turned off, you should NOT see this.",
-  "id" : "2026-06-test-3-info",
+  "body" : "This is a critical message. It appears even when In-App Messages are turned off.",
+  "id" : "2026-06-test-3-critical",
   "minVersion" : "2.5",
-  "severity" : "info",
-  "title" : "Routine Notice"
+  "severity" : "critical",
+  "title" : "Critical Notice"
 }
