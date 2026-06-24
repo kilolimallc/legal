@@ -1,0 +1,8 @@
+{
+  "body" : "If you can read this, the launch-message system works. This is a test notice — dismiss it and it won't return.",
+  "id" : "2026-06-test-1",
+  "link" : "https:\/\/kilolimallc.github.io\/legal\/10-in-24\/support.html",
+  "minVersion" : "2.5",
+  "severity" : "info",
+  "title" : "In-App Messages Are Live"
+}
