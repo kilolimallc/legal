@@ -1,5 +1,6 @@
 {
   "body" : "Settings in the app are defaults — confirm they match your operator's current procedures before relying on the results.",
+  "date" : "2026-06-24T12:00:00Z",
   "id" : "2026-06-info-notice",
   "severity" : "warning",
   "title" : "Check Your Settings"
