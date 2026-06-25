@@ -1,6 +1,7 @@
 {
   "blockBelowVersion" : "2.4",
   "body" : "A calculation error was found in an earlier version. Please update to the latest version before relying on the app's results.",
+  "date" : "2026-06-24T12:00:00Z",
   "id" : "2026-06-critical-update-required-v2.4",
   "link" : "https:\/\/apps.apple.com\/app\/id973816329",
   "minVersion" : "2.4",
