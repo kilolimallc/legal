@@ -17,5 +17,13 @@
     "id" : "2026-06-info-what-s-new",
     "severity" : "info",
     "title" : "What's New"
+  },
+  {
+    "body" : "This is a test message.",
+    "date" : "2026-06-25T12:00:00Z",
+    "id" : "2026-06-info-notice-Test1",
+    "severity" : "info",
+    "testFlightOnly" : true,
+    "title" : "Test message 1"
   }
 ]
