@@ -25,5 +25,13 @@
     "severity" : "info",
     "testFlightOnly" : true,
     "title" : "Test message 1"
+  },
+  {
+    "body" : "Settings in the app are defaults — confirm they match your operator's current procedures before relying on the results.\n\nThis is only a test.",
+    "date" : "2026-06-25T12:00:00Z",
+    "id" : "2026-06-warning-check-your-settings-test-2",
+    "severity" : "warning",
+    "testFlightOnly" : true,
+    "title" : "Check Your Settings Test Message"
   }
 ]
