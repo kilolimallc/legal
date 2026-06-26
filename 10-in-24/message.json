@@ -29,6 +29,7 @@
   {
     "body" : "Settings in the app are defaults — confirm they match your operator's current procedures before relying on the results.\n\nThis is only a test.",
     "date" : "2026-06-25T12:00:00Z",
+    "expires" : "2026-06-24T23:59:59Z",
     "id" : "2026-06-warning-check-your-settings-test-2",
     "severity" : "warning",
     "testFlightOnly" : true,
