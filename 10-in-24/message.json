@@ -35,5 +35,13 @@
     "severity" : "warning",
     "testFlightOnly" : true,
     "title" : "Check Your Settings Test Message"
+  },
+  {
+    "body" : "Test 2",
+    "date" : "2026-06-27T12:00:00Z",
+    "id" : "2026-06-info-notice",
+    "severity" : "info",
+    "testFlightOnly" : true,
+    "title" : "Test 2"
   }
 ]
