@@ -57,6 +57,7 @@
   {
     "body" : "Thanks for being a Kilo Lima Management LLC customer.",
     "date" : "2026-06-29T12:00:00Z",
+    "expires" : "2026-06-28T23:59:59Z",
     "id" : "2026-06-29-1-info-notice",
     "severity" : "info",
     "testFlightOnly" : true,
