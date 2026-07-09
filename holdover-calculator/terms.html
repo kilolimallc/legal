@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terms of Service — Holdover Calculator</title>
   <style>
-    :root { color-scheme: light; }
+    :root { color-scheme: light dark; }
     * { box-sizing: border-box; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
@@ -53,10 +53,23 @@
     }
     a { color: #316FB7; text-decoration: underline; }
     a:hover { text-decoration: none; }
+    @media (prefers-color-scheme: dark) {
+      body { color: #e5e5e7; background: #1c1c1e; }
+      h1 { color: #f5f5f7; }
+      h2 { color: #f2f2f7; }
+      .lede { color: #98989d; }
+      .effective { color: #8e8e93; }
+      .footer { border-top-color: #38383a; color: #98989d; }
+      .eyebrow { color: #5aa9e6; }
+      a { color: #5aa9e6; }
+    }
   </style>
 </head>
 <body>
-  <img class="brand-logo" src="../assets/kilolima-logo.svg" alt="Kilo Lima Management LLC" style="height:40px;width:auto;display:block;margin:0 0 28px;">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="../assets/kilolima-logo-dark.svg">
+    <img class="brand-logo" src="../assets/kilolima-logo.svg" alt="Kilo Lima Management LLC" style="height:40px;width:auto;display:block;margin:0 0 28px;">
+  </picture>
   <p class="eyebrow">Holdover Calculator</p>
   <h1>Terms of Service</h1>
   <p class="lede">These terms govern your use of the Holdover Calculator subscription. By subscribing, you agree to them.</p>
