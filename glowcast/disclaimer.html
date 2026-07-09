@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Disclaimer — GlowCast</title>
+  <style>
+    :root { color-scheme: light dark; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+      color: #1c1c1e;
+      background: #ffffff;
+      line-height: 1.55;
+      font-size: 17px;
+      -webkit-text-size-adjust: 100%;
+    }
+    .eyebrow {
+      color: #316FB7;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      margin: 0 0 6px;
+    }
+    h1 { font-size: 30px; font-weight: 700; margin: 0 0 8px; line-height: 1.2; }
+    .lede { color: #6c6c70; font-size: 16px; margin: 0 0 8px; }
+    .effective { color: #8e8e93; font-size: 13px; margin: 0 0 32px; }
+    h2 { font-size: 19px; font-weight: 600; margin: 32px 0 8px; color: #1c1c1e; }
+    p { margin: 0 0 12px; }
+    .footer {
+      margin-top: 56px;
+      padding-top: 24px;
+      border-top: 1px solid #e5e5ea;
+      color: #6c6c70;
+      font-size: 15px;
+    }
+    a { color: #316FB7; text-decoration: underline; }
+    a:hover { text-decoration: none; }
+    @media (prefers-color-scheme: dark) {
+      body { color: #e5e5e7; background: #1c1c1e; }
+      h1 { color: #f5f5f7; }
+      h2 { color: #f2f2f7; }
+      .lede { color: #98989d; }
+      .effective { color: #8e8e93; }
+      .footer { border-top-color: #38383a; color: #98989d; }
+      .eyebrow { color: #5aa9e6; }
+      a { color: #5aa9e6; }
+    }
+  </style>
+</head>
+<body>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="../assets/kilolima-logo-dark.svg">
+    <img class="brand-logo" src="../assets/kilolima-logo.svg" alt="Kilo Lima Management LLC" style="height:40px;width:auto;display:block;margin:0 0 28px;">
+  </picture>
+  <p class="eyebrow">GlowCast</p>
+  <h1>Disclaimer</h1>
+  <p class="lede">Please read this before relying on GlowCast to control or schedule your lights.</p>
+  <p class="effective">Effective: July 9, 2026</p>
+
+  <h2>Advisory Tool</h2>
+  <p>GlowCast is a convenience tool for designing and scheduling smart-lighting scenes. It is not a life-safety system. Do not rely on it for security lighting, emergency egress lighting, or any situation where light being on or off could affect safety.</p>
+
+  <h2>Third-Party Devices and Services</h2>
+  <p>GlowCast controls lights through each manufacturer's own app, API, or hub (for example, Govee's cloud service). Their availability, features, and behavior are outside our control and may change or be interrupted. Cloud control requires an internet connection and is subject to the manufacturer's rate limits and outages; scheduled changes may be delayed or missed.</p>
+
+  <h2>Installation and Electrical Safety</h2>
+  <p>You are responsible for the safe installation, wiring, weatherproofing, and use of your lighting hardware &mdash; especially outdoor and do-it-yourself installations (for example, WLED-based addressable strips). Follow the manufacturer's instructions and all applicable electrical codes. GlowCast does not verify that your hardware is installed, rated, or suitable for its location.</p>
+
+  <h2>Schedules and Automation</h2>
+  <p>Automatic on/off and holiday scheduling are provided on a best-effort basis and depend on your device, your network, the manufacturer's service, and (for cloud scheduling) our backend. Do not depend on a scene turning on or off at an exact time. Verify any behavior that matters to you.</p>
+
+  <h2>Shared Plans</h2>
+  <p>Color plans you publish are visible to other users, and plans you import were authored by others. Review any imported plan before applying it to your lights.</p>
+
+  <h2>No Warranty; Limitation of Liability</h2>
+  <p>This application is provided "as is," without warranty of any kind, express or implied. To the maximum extent permitted by law, Kilo Lima Management LLC disclaims all liability for any direct, indirect, incidental, consequential, or special damages arising from use of, or inability to use, this application &mdash; including property damage, missed or mistimed schedules, or device malfunction.</p>
+
+  <div class="footer">
+    Questions? Email <a href="mailto:kilolimallc@icloud.com">kilolimallc@icloud.com</a>.
+  </div>
+</body>
+</html>

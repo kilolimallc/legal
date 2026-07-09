@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Privacy Policy — GlowCast</title>
+  <style>
+    :root { color-scheme: light dark; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+      color: #1c1c1e;
+      background: #ffffff;
+      line-height: 1.55;
+      font-size: 17px;
+      -webkit-text-size-adjust: 100%;
+    }
+    .eyebrow {
+      color: #316FB7;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      margin: 0 0 6px;
+    }
+    h1 { font-size: 30px; font-weight: 700; margin: 0 0 8px; line-height: 1.2; }
+    .lede { color: #6c6c70; font-size: 16px; margin: 0 0 8px; }
+    .effective { color: #8e8e93; font-size: 13px; margin: 0 0 32px; }
+    h2 { font-size: 19px; font-weight: 600; margin: 32px 0 8px; color: #1c1c1e; }
+    p { margin: 0 0 12px; }
+    ul { margin: 0 0 12px; padding-left: 22px; }
+    li { margin: 0 0 6px; }
+    .footer {
+      margin-top: 56px;
+      padding-top: 24px;
+      border-top: 1px solid #e5e5ea;
+      color: #6c6c70;
+      font-size: 15px;
+    }
+    a { color: #316FB7; text-decoration: underline; }
+    a:hover { text-decoration: none; }
+    @media (prefers-color-scheme: dark) {
+      body { color: #e5e5e7; background: #1c1c1e; }
+      h1 { color: #f5f5f7; }
+      h2 { color: #f2f2f7; }
+      .lede { color: #98989d; }
+      .effective { color: #8e8e93; }
+      .footer { border-top-color: #38383a; color: #98989d; }
+      .eyebrow { color: #5aa9e6; }
+      a { color: #5aa9e6; }
+    }
+  </style>
+</head>
+<body>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="../assets/kilolima-logo-dark.svg">
+    <img class="brand-logo" src="../assets/kilolima-logo.svg" alt="Kilo Lima Management LLC" style="height:40px;width:auto;display:block;margin:0 0 28px;">
+  </picture>
+  <p class="eyebrow">GlowCast</p>
+  <h1>Privacy Policy</h1>
+  <p class="lede">GlowCast helps you design, schedule, and control your smart lights, and optionally share lighting plans with others. This policy explains what data the app handles and why.</p>
+  <p class="effective">Effective: July 9, 2026</p>
+
+  <h2>Summary</h2>
+  <p>You can use GlowCast's editor and scheduler, and control your own lights, without creating an account. If you choose to sign in, we store your account email, the lighting plans you save, basic information about your lighting devices, and &mdash; only if you opt in &mdash; an encrypted copy of the manufacturer API key needed to run your schedules. We do not sell your data, we do not use third-party advertising, and we do not embed third-party analytics or tracking SDKs.</p>
+
+  <h2>Account Information</h2>
+  <p>If you create an account, we collect the email address and password you provide. Authentication is handled by our backend provider, Supabase; passwords are stored by Supabase in salted, hashed form and are never visible to us. Your email is used to sign you in, to associate your saved plans with your account, and, where you publish a plan, to attribute it by your chosen username.</p>
+
+  <h2>Lighting Plans and Shared Content</h2>
+  <p>Lighting plans you save (colors, sequences, and schedules) are stored in our database so they sync to your account. If you mark a plan <em>public</em>, that plan and your username become visible to other GlowCast users, who may view or copy ("fork") it. Plans you keep <em>private</em> are visible only to you. You can delete any plan at any time.</p>
+
+  <h2>Device Information</h2>
+  <p>When you connect lights, GlowCast stores non-sensitive metadata about your devices &mdash; such as the device name you gave them, the model, the manufacturer's device identifier, and the device's capabilities (for example, how many color segments it has). This lets your devices and automations sync across your sessions. GlowCast does not collect your home address or the physical location of your lights.</p>
+
+  <h2>Manufacturer API Keys</h2>
+  <p>To control your lights, GlowCast uses a credential you obtain from your light's manufacturer (for example, a Govee API key). On your device, this key is stored locally. If you enable <em>cloud scheduling</em> &mdash; which lets your schedules run when the app is closed &mdash; the key is uploaded to our backend and stored <strong>encrypted at rest</strong>, decrypted only by the scheduled server process that sends commands to your lights on your behalf. Your key is never shown to other users and is never included in a shared plan. You can remove it at any time.</p>
+
+  <h2>Third-Party Services</h2>
+  <p>GlowCast relies on the following third parties, each governed by its own privacy policy:</p>
+  <ul>
+    <li><strong>Supabase</strong> &mdash; hosts our authentication, database, and scheduled functions. See <a href="https://supabase.com/privacy">supabase.com/privacy</a>.</li>
+    <li><strong>Light manufacturers you connect</strong> (for example, Govee) &mdash; when you control your lights, the commands you send and the API key you provide are transmitted to that manufacturer's service so it can operate your devices. Your use of their service is governed by their terms and privacy policy.</li>
+  </ul>
+
+  <h2>Information We Do Not Collect</h2>
+  <p>GlowCast does not embed third-party advertising or analytics/tracking frameworks, does not build advertising profiles, and does not request or transmit your device's geographic location. We do not sell or rent your personal information.</p>
+
+  <h2>Data Retention and Deletion</h2>
+  <p>We keep your account data for as long as your account exists. You can delete individual plans and devices from within the app. To delete your account and associated data, email us at the address below and we will remove your record. Deleting the app from your device removes locally stored data (including any locally saved API key).</p>
+
+  <h2>Security</h2>
+  <p>Data is transmitted over encrypted connections (HTTPS/TLS), and manufacturer API keys held for cloud scheduling are encrypted at rest. No method of transmission or storage is completely secure, and we cannot guarantee absolute security.</p>
+
+  <h2>Children's Privacy</h2>
+  <p>GlowCast is not directed to children under 13, and Kilo Lima Management LLC does not knowingly collect information from children under 13.</p>
+
+  <h2>Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time. The most current version will be available at this URL, and material changes will be reflected in the Effective Date above.</p>
+
+  <div class="footer">
+    Questions about this policy? Email <a href="mailto:kilolimallc@icloud.com">kilolimallc@icloud.com</a>.
+  </div>
+</body>
+</html>
