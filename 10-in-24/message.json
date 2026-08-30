@@ -66,6 +66,7 @@
   {
     "body" : "We've shipped improvements in the latest version. Tap Learn More for the details.",
     "date" : "2026-06-29T12:00:00Z",
+    "expires" : "2026-08-28T23:59:59Z",
     "id" : "2026-06-info-what-s-new-testing-buttons",
     "severity" : "info",
     "testFlightOnly" : true,
