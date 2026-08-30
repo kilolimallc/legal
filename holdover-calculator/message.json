@@ -1,48 +1,10 @@
 [
   {
-    "body" : "Settings in the app are defaults — confirm they match your operator's current procedures before relying on the results.",
-    "date" : "2026-06-28T12:00:00Z",
-    "expires" : "2026-06-27T23:59:59Z",
-    "id" : "2026-06-info-notice",
-    "severity" : "warning",
-    "testFlightOnly" : true,
-    "title" : "Check Your Settings"
-  },
-  {
-    "body" : "Settings in the app are defaults — confirm they match your operator's current procedures before relying on the results.",
-    "date" : "2026-06-28T12:00:00Z",
-    "expires" : "2026-06-28T23:59:59Z",
-    "id" : "2026-06-warning-check-your-settings",
-    "severity" : "warning",
-    "testFlightOnly" : true,
-    "title" : "Check Your Settings"
-  },
-  {
-    "body" : "Settings in the app are defaults — confirm they match your operator's current procedures before relying on the results.",
-    "date" : "2026-06-29T12:00:00Z",
-    "expires" : "2026-06-28T23:59:59Z",
-    "id" : "2026-06-28-1warning-check-your-settings",
-    "severity" : "warning",
-    "testFlightOnly" : true,
-    "title" : "Check Your Settings"
-  },
-  {
-    "blockBelowVersion" : "2.1.2",
-    "body" : "This version uses the 2025-2026 tables. Under the 2026-2027 guidelines\nmany holdover times are shorter, and none are longer — so this version\ncan show more time than the current guidelines allow.\n\nUpdate before your next departure.",
-    "date" : "2026-08-27T12:00:00Z",
-    "expires" : "2026-08-26T23:59:59Z",
-    "id" : "2026-08-23:20:09",
-    "link" : "https:\/\/apps.apple.com\/app\/id768019181",
-    "severity" : "critical",
-    "testFlightOnly" : true,
-    "title" : "Holdover Times Out of Date"
-  },
-  {
     "blockBelowVersion" : "2.2",
     "body" : "This version uses the 2025-2026 tables. Under the 2026-2027 guidelines\nmany holdover times are shorter, and none are longer — so this version\ncan show more time than the current guidelines allow.\n\nUpdate before your next departure.",
     "date" : "2026-08-28T12:00:00Z",
     "id" : "hc-update-required-2.2",
-    "link" : "https:\/\/apps.apple.com\/app\/id768019181",
+    "link" : "https://apps.apple.com/app/id768019181",
     "severity" : "critical",
     "title" : "Holdover Times Out of Date"
   }
