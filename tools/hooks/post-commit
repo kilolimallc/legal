@@ -1,0 +1,39 @@
+#!/bin/sh
+#
+# Auto-backup after every commit. Two independent off-site copies:
+#   1. push the current branch to origin (GitHub)
+#   2. a single-file git bundle in iCloud Drive
+# Both are best-effort and silent on failure — an offline commit still
+# succeeds, and the next commit catches everything up.
+#
+# Re-install after a clone (.git/hooks is not tracked):
+#   cp tools/hooks/post-commit .git/hooks/post-commit && chmod +x .git/hooks/post-commit
+
+[ -n "${GIT_HOOKS_SUPPRESS:-}" ] && exit 0
+branch=$(git symbolic-ref --short HEAD 2>/dev/null) || exit 0
+
+(
+  unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
+  cd "$(git rev-parse --show-toplevel)" || exit 0
+  if git remote get-url origin >/dev/null 2>&1; then
+      git push --quiet origin "$branch" >/dev/null 2>&1 \
+        && echo "  ✓ pushed $branch → origin" \
+        || echo "  ⚠ push failed (offline?) — it'll sync on the next commit."
+  fi
+) &
+exit 0
+
+# iCloud snapshot: a single self-contained git bundle of ALL history,
+# refreshed at most once a day. iCloud syncs one static file safely, unlike a
+# live .git (whose async, per-file, evict-to-cloud syncing can corrupt it).
+# Written atomically via a temp file so iCloud never sees a partial bundle.
+# Restore with:  git clone "legal.bundle" restored
+ICLOUD_BUNDLE="$HOME/Library/Mobile Documents/com~apple~CloudDocs/Apps/Kilo Lima Apps/Backups/legal.bundle"
+if [ ! -f "$ICLOUD_BUNDLE" ] || [ -n "$(find "$ICLOUD_BUNDLE" -mmin +1200 2>/dev/null)" ]; then
+    mkdir -p "$(dirname "$ICLOUD_BUNDLE")" 2>/dev/null
+    if git bundle create "$ICLOUD_BUNDLE.tmp" --all >/dev/null 2>&1; then
+        mv -f "$ICLOUD_BUNDLE.tmp" "$ICLOUD_BUNDLE" && echo "  ✓ iCloud snapshot refreshed"
+    else
+        rm -f "$ICLOUD_BUNDLE.tmp" 2>/dev/null
+    fi
+fi
