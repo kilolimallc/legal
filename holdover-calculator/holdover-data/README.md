@@ -15,7 +15,24 @@ depends on them (Phase 1).
 | File | What it is |
 |---|---|
 | `manifest.json` | Points at the current payload and describes it |
+| `manifest-beta.json` | Same, but **only TestFlight and development builds read it** |
 | `holdover_fluids-<n>.json` | A payload. `<n>` is its `dataVersion` |
+
+**`manifest-beta.json` is normally absent.** Beta builds try it first and fall
+through to `manifest.json` when it 404s. It exists so new table data can be put
+in front of a real pilot before it reaches the App Store — and as a separate
+file rather than a flag, so running a beta test never edits the production
+manifest at all.
+
+Two things to remember about it:
+
+- **Delete it when the test is over.** Leaving it in place means beta builds
+  stay on test data indefinitely.
+- **Deleting it does not undo an adoption.** `dataVersion` only increases, so a
+  device that took beta version 2 refuses production version 1 afterwards, for
+  good. The exits are publishing a higher production version with the correct
+  bytes, or the TestFlight-only "Use the tables included with the app" button in
+  Settings.
 
 ## Rules — read before editing anything here
 
