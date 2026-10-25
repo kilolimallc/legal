@@ -1,0 +1,16 @@
+{
+  "dataVersion": 1,
+  "schemaVersion": 15,
+  "seasons": [
+    "2026-2027"
+  ],
+  "issueDates": {
+    "FAA": "August 11, 2026",
+    "TC": "August 11, 2026"
+  },
+  "minAppVersion": "2.4",
+  "sha256": "a5196289e83e1393362e5c16b33a3430ebd0bb73467897bdeae4a13cea076997",
+  "bytes": 3149785,
+  "url": "https://kilolimallc.github.io/legal/holdover-calculator/holdover-data/holdover_fluids-1.json",
+  "notes": "Initial manifest. Describes the export bundled in 2.4. No app version reads this yet."
+}
