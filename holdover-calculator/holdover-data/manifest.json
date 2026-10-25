@@ -1,16 +1,5 @@
 {
-  "dataVersion": 1,
-  "schemaVersion": 15,
-  "seasons": [
-    "2026-2027"
-  ],
-  "issueDates": {
-    "FAA": "August 11, 2026",
-    "TC": "August 11, 2026"
-  },
-  "minAppVersion": "2.4",
-  "sha256": "a5196289e83e1393362e5c16b33a3430ebd0bb73467897bdeae4a13cea076997",
-  "bytes": 3149785,
-  "url": "https://kilolimallc.github.io/legal/holdover-calculator/holdover-data/holdover_fluids-1.json",
-  "notes": "Initial manifest. Describes the export bundled in 2.4. No app version reads this yet."
+  "keyID": "93e6e396",
+  "payload": "ewogICJkYXRhVmVyc2lvbiI6IDEsCiAgInNjaGVtYVZlcnNpb24iOiAxNSwKICAic2Vhc29ucyI6IFsKICAgICIyMDI2LTIwMjciCiAgXSwKICAiaXNzdWVEYXRlcyI6IHsKICAgICJGQUEiOiAiQXVndXN0IDExLCAyMDI2IiwKICAgICJUQyI6ICJBdWd1c3QgMTEsIDIwMjYiCiAgfSwKICAibWluQXBwVmVyc2lvbiI6ICIyLjQiLAogICJzaGEyNTYiOiAiYTUxOTYyODllODNlMTM5MzM2MmU1YzE2YjMzYTM0MzBlYmQwYmI3MzQ2Nzg5N2JkZWFlNGExM2NlYTA3Njk5NyIsCiAgImJ5dGVzIjogMzE0OTc4NSwKICAidXJsIjogImh0dHBzOi8va2lsb2xpbWFsbGMuZ2l0aHViLmlvL2xlZ2FsL2hvbGRvdmVyLWNhbGN1bGF0b3IvaG9sZG92ZXItZGF0YS9ob2xkb3Zlcl9mbHVpZHMtMS5qc29uIiwKICAibm90ZXMiOiAiSW5pdGlhbCBtYW5pZmVzdC4gRGVzY3JpYmVzIHRoZSBleHBvcnQgYnVuZGxlZCBpbiAyLjQuIFNpZ25lZDsgbm8gYXBwIHZlcnNpb24gZmV0Y2hlcyBpdCB5ZXQuIgp9Cg==",
+  "signature": "kn6BjmRBiRbHYi49Y7jTCemjKAGSgyA59zUTBe0EW+fQwBQVZTy6raNyn6Msnv+sO+Iq4FgHvha3H42MXf9mCA=="
 }

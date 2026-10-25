@@ -33,24 +33,43 @@ already adopted. A rollback therefore publishes a *new* version containing the
 *old* bytes — to undo `-17`, publish `-18` holding `-16`'s content. Do not
 decrement.
 
-**3. Generate the manifest, never hand-write it.**
+**3. Generate the manifest, then sign it. Never hand-write either.**
 
-    python3 tools/make-table-manifest.py --data-version <n> > manifest.json
+Two commands in the app repo:
 
-in the app repo. It computes `sha256` and `bytes`, and it reads the accepted
-schema versions out of the app's own Swift source so the two cannot drift. A
-hand-edited `sha256` is a payload no device will accept.
+    python3 tools/make-table-manifest.py --data-version <n> > /tmp/m.json
+    swift tools/table-data-tool.swift sign --manifest /tmp/m.json \
+        --out .../holdover-data/manifest.json
 
-**4. The manifest must be signed before any app version reads it.**
+The generator computes `sha256` and `bytes`, and reads the accepted schema
+versions out of the app's own Swift source so the two cannot drift. The signer
+refuses a key the app does not carry, and refuses a manifest missing any field
+the signature has to cover. A hand-edited `sha256` is a payload no device will
+accept.
 
-The current `manifest.json` is **unsigned**, which is safe only because nothing
-consumes it. A hash proves the payload matches the manifest; it does not prove
-who published them, and both come from this same repository. Anyone who can
-write here can write a consistent lie.
+**4. `manifest.json` is a signed envelope, not a readable manifest.**
 
-Before the app gains a fetch path, the manifest becomes an Ed25519-signed
-envelope with the payload hash and `dataVersion` *inside* the signed region, and
-the private key stays off GitHub. See the plan's "Threat model" section.
+It looks like this:
+
+    { "keyID": "...", "payload": "<base64>", "signature": "<base64>" }
+
+The signed region is the manifest bytes **verbatim**, which is why they are
+carried base64-encoded rather than inline: nothing re-serializes them, so key
+order, whitespace and number formatting cannot drift between the signer and the
+app. To read what a published manifest actually says:
+
+    curl -s <url>/manifest.json | python3 -c \
+      'import json,base64,sys;print(base64.b64decode(json.load(sys.stdin)["payload"]).decode())'
+
+Signing is what makes this repository untrusted infrastructure. A hash proves
+the payload matches the manifest; it does not prove who published them, and both
+come from here. Anyone who can write to this repo can write a consistent lie —
+but not a signed one, because **the private key is never on GitHub.** It lives
+on Greg's Mac under `~/.config/holdover-calculator/table-signing.key`, and the
+app carries only the public half (key ID `93e6e396`, in
+`Models/TableManifest.swift`).
+
+Signed as of 2026-10-25. See the plan's "Threat model" section.
 
 **5. The app always keeps a copy of the tables in its bundle.**
 
