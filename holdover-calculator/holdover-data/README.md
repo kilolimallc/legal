@@ -6,16 +6,17 @@ tables without an App Store release.
 Design, threat model and phasing live in the app repo:
 `docs/holdover-data-updates-plan.md` in `kilolimallc/holdover-calculator`.
 
-**Nothing reads these yet.** No shipped app version fetches them. They exist so
-the publishing workflow and the manifest generator are exercised before anything
-depends on them (Phase 1).
+**Who reads these.** Holdover Calculator **2.4** and later fetch them at launch
+and on returning to the app. 2.3 and earlier do not — the fetch path shipped in
+2.4 — so until 2.4 is released on the App Store, the only devices reading this
+directory are TestFlight ones.
 
 ## Files
 
 | File | What it is |
 |---|---|
 | `manifest.json` | Points at the current payload and describes it |
-| `manifest-beta.json` | Same, but **only TestFlight and development builds read it** |
+| `manifest-beta.json` | Same, but **only TestFlight and development builds read it**. Absent unless a beta test is running |
 | `holdover_fluids-<n>.json` | A payload. `<n>` is its `dataVersion` |
 
 **`manifest-beta.json` is normally absent.** Beta builds try it first and fall
@@ -44,6 +45,13 @@ rollback a one-line edit, and what lets the `sha256` be trusted as a cache key.
 Editing a payload in place breaks both.
 
 **2. `dataVersion` only ever increases.**
+
+**`dataVersion` 2 is spent.** A beta test on 2026-10-25 published it as
+deliberately wrong data (FAA Generic Type IV, adjusted, moderate snow cut to
+0:02–0:03) to prove a real correction reaches a device. Both the manifest and the
+payload have been deleted, but any TestFlight device that adopted it still holds
+it and will refuse a *production* version 2 as "not newer". The next real
+publish is therefore **3**, not 2.
 
 The app refuses a payload whose `dataVersion` is not greater than the one it has
 already adopted. A rollback therefore publishes a *new* version containing the
