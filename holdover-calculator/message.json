@@ -41,7 +41,6 @@
     "linkTitle" : "Update in the App Store",
     "maxVersion" : "2.4",
     "severity" : "info",
-    "testFlightOnly" : true,
     "title" : "Nearby Weather fix in 2.4.1"
   }
 ]
