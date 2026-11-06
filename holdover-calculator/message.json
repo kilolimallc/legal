@@ -11,6 +11,7 @@
   {
     "body" : "On some devices Nearby Weather always failed, saying the weather service was unavailable. The real cause was ours: the app asked for weather near you in a way the service could not read, and whether it happened depended on your exact location. Version 2.4.1 fixes it. Updating is recommended, not required — Search Other Stations and manual entry were never affected.",
     "date" : "2026-11-05T12:00:00Z",
+    "expires" : "2026-11-04T23:59:59Z",
     "id" : "hc-2.4.1-nearby-weather-test",
     "link" : "https:\/\/apps.apple.com\/app\/id768019181",
     "linkTitle" : "Update in the App Store",
